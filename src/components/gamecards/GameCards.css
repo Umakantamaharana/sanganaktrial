@@ -1,0 +1,16 @@
+.gamecards{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .gamecards>div{
+      margin: 20px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .gamecards{
+      flex-direction: column;
+    }
+  }

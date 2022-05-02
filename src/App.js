@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Home from './components/home/Home'
+import About from './components/About/About'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Register from './components/register/Register'
+import Login from './components/login/Login';
+import ResponsiveAppBar from './components/navbar/AppBar';
+import Footer from './components/footer/Footer'
+
+// import {useState, useEffect} from 'react'
 
 function App() {
+  // const [data, setData] = useState([{}])
+  // useEffect(() => {
+  //   fetch("/time").then(
+  //     res => res.json()
+  //   ).then(
+  //     data => {
+  //       setData(data)
+  //     }
+  //   )
+  // },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+    <ResponsiveAppBar/>
+    <Routes>
+      <Route exact path='/' element={<Home />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/about' element={<About />} />
+    </Routes>
+    <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App

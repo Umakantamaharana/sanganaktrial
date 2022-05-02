@@ -1,0 +1,19 @@
+.gallery h1{
+    color: white;
+}
+
+.images{
+    display: content !important;
+    justify-content: center;
+    padding: 20px;
+}
+
+.images>div {
+    width: 30%;
+    float: left;
+    margin: 1.65%;
+}
+
+.images>div>img{
+    width: 100%;
+}
