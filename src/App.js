@@ -6,6 +6,7 @@ import Register from './components/register/Register'
 import Login from './components/login/Login';
 import ResponsiveAppBar from './components/navbar/AppBar';
 import Footer from './components/footer/Footer'
+import { Com } from './components/committee/Com';
 
 // import {useState, useEffect} from 'react'
 
@@ -28,6 +29,7 @@ function App() {
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
       <Route path='/about' element={<About />} />
+      <Route path='/committee' element={<Com />} />
     </Routes>
     <Footer />
     </Router>
